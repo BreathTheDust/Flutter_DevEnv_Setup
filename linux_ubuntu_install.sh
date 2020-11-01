@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Install Flutter SDK
-echo -n "Do You Want to Install Flutter SDK? Type (y) for Yes and (n) for No"
+echo -n "Do you want to install Flutter SDK (y/n)? "
 read answer
-if [ "$answer" != "${answer#[Yy] ;then
-  sudo snap install flutter --classic
-else 
-  echo "Flutter SDK installation is skipped"
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    sudo snap install flutter -classic
+else
+    echo "Flutter SDK installation is skipped"
 fi
